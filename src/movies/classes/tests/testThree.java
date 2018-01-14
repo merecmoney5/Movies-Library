@@ -19,11 +19,12 @@ public class testThree {
         Movie serieTwo = serieOne;
         System.out.println(serieTwo);
         //here can't be possible due to Movie is not a Regular Movie
-        //by that is must be casted
+        //by that it must be casted
         RegularMovie serieThree = (RegularMovie)serieTwo;
         System.out.println(serieThree);
         Movie seriewo = serieThree;
         System.out.println(seriewo instanceof Movie);
+        System.out.println("hola");
     }
 
 }

@@ -5,6 +5,9 @@ package movies.classes.data;
 import movies.classes.dateOfMovies.DateOfMovies;
 import movies.classes.dateOfMovies.TimeOfMovies;
 import movies.interfaces.Movie;
+/*
+change class to accept sequels for a movie
+ */
 public class RegularMovie implements Movie {
 
     private String name;
@@ -23,7 +26,7 @@ public class RegularMovie implements Movie {
 
     @Override
     public void setTitle(String name) {
-        this.name=name;
+        this.name = name;
     }
 
     @Override
@@ -33,14 +36,14 @@ public class RegularMovie implements Movie {
 
     @Override
     public void setGenre(String genre) {
-        this.genre=genre;
+        this.genre = genre;
     }
 
     @Override
     public void setDate(DateOfMovies date) {
         if ((date.getDay() < 1 || date.getDay() > 31) && (date.getMonth() < 0 || date.getMonth() > 13)){
             System.out.println("\n***Setting Default Date***");
-            this.date=new DateOfMovies();
+            this.date = new DateOfMovies();
         }else {
             this.date = new DateOfMovies(date.getDay(),date.getMonth(),date.getYear());
         }
@@ -83,7 +86,7 @@ public class RegularMovie implements Movie {
 
     @Override
     public String toString(){
-        return "The movie is "+getTitle()+"\nits rate is "+getRate()+"\ngenre is "+getGenre()+"\nthe time is "+getTime()+"\nfinally its date is "+getDate()+"\n";
+        return "The movie is " + getTitle() + "\nits rate is " + getRate() + "\ngenre is " + getGenre() + "\nthe time is " + getTime() + "\nfinally its date is "+ getDate()+"\n";
     }
     
 }
