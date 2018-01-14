@@ -19,8 +19,8 @@ public class testTwo {
         Movie movie2 = new RegularMovie("The Hunger Games: Mockingjay - Part 1",5," Action, Adventure, Mystery",new TimeOfMovies(2,3),new DateOfMovies(21,11,2014));
 
 
-        CreateFile.createFile("movie1","/home/carlos/Programming/Java/Movies-Library/createdFiles/");
-        String path = "/home/carlos/Programming/Java/Movies-Library/createdFiles/movie1";
+        CreateFile.createFile("movie1.txt","/home/carlos/Programming/Java/Movies-Library/createdFiles/");
+        String path = "/home/carlos/Programming/Java/Movies-Library/createdFiles/movie1.txt";
         WriteFile.writeFile(movie1.toString(),path);
         try {
             WriteFile.appendInAFile(movie2.toString(),path);
